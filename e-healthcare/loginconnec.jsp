@@ -1,0 +1,148 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>LogIn</title>
+
+    <meta name="description" content="">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/77fe48af27.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <a class="navbar-brand title" style="font-size: 29px; color: white; letter-spacing: 0.1ch; font-weight: 700; font-family: 'Roboto', sans-serif;" href="home.html">E-Health Care Management System</a>
+                <button class="navbar-toggler btn btn-primary outline" style="border: 0;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto list" style="font-size: 19px; ">
+                        <li class="nav-item">
+                            <a class="nav-link nav-text" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-text" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-text" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-text active" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-text" href="#cta">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 form">
+                        <input style="font-family: 'Roboto', sans-serif;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary outline my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+
+            </nav>
+            <section class="signup vh-100" style="">
+                <div class="container-fluid h-custom container">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-md-9 col-lg-6 col-xl-4">
+                            <form action="getData" method = "get">
+                                <div class="form-outline mb-4" >
+                                    <label for="adhaar_number">Adhaar Id:</label><br>
+                                    <input type="number" class="form-input" name="adhaar_number" id="adhaar_number" placeholder="Enter AdhaarID" maxlength="12" required />
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-3">
+                                    <label class="form-label" for="form3Example4">Password</label>
+                                    <input type="password" id="form3Example4" name = "pasword" class="form-input" placeholder="Enter password" />
+
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check mb-0">
+                                        <label class="form-check-label" for="form2Example3">
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#!" class="text-body" style="color: grey">Forgot password?</a>
+                                </div>
+                                <div class="text-center text-lg-start mt-4 pt-2">
+                                    <button type="submit" class="s-btn">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <p style="font-size: xx-large; margin-left: 80px; margin-right: 0px;">or</p>
+                        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                            <form>
+                                <div class="form-outline mb-4">
+                                    <label for="adhaar_number">Not have an account, Register?</label><br>
+                                    <div class="form-group" style="padding: 5% 0 5% 0; text-align: center;">
+                                        <a href="register.html" class="r-btn">Register</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 ">
+                    <!-- Copyright -->
+                    <div class=" mb-3 mb-md-0 ">
+                        Copyright © 2020. All rights reserved.
+                    </div>
+                    <!-- Copyright -->
+
+                    <!-- Right -->
+                    <div>
+                        <a href="#! " class="text-white me-4 ficons ">
+                            <i class="fab fa-facebook-f "></i>
+                        </a>
+                        <a href="#! " class="text-white me-4 ficons ">
+                            <i class="fab fa-twitter "></i>
+                        </a>
+                        <a href="#! " class="text-white me-4 ficons ">
+                            <i class="fab fa-google "></i>
+                        </a>
+                        <a href="#! " class="text-white ficons ">
+                            <i class="fab fa-linkedin-in "></i>
+                        </a>
+                    </div>
+                    <!-- Right -->
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src=" " async defer></script>
+</body>
+
+</html>
+<!-- d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary -->
